@@ -271,8 +271,122 @@ header ul{
     height:280px;
 }
 
-.form{
-    width:90%;
 }
 
+/* ================= FORM ================= */
+.form p{
+    text-align:center;
+    margin-top:15px;
+    cursor:pointer;
+    color:#2d6a4f;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        height:auto;
+        padding:15px;
+    }
+
+    header ul{
+        margin-top:10px;
+        gap:20px;
+    }
+
+    .home{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .left h1{
+        font-size:40px;
+    }
+
+    .right img{
+        width:280px;
+        height:280px;
+    }
+
+    .form{
+        width:90%;
+    }
+}
+
+/* ================= MODAL ================= */
+
+.backdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    background: transparent;
+    width: 550px;
+    max-width: 90%;
+    z-index: 1001;   /* <-- Important */
+}
+
+.modal::backdrop{
+    display:none;
+}
+
+/* ================= LOGIN FORM ================= */
+
+.form{
+    width:100%;
+    margin:0;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+.form-control{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.form-control label{
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
+}
+
+.form button{
+    width:100%;
+    background:#2d6a4f;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.form p{
+    text-align:center;
+    margin-top:15px;
+    cursor:pointer;
+    color:#2d6a4f;
 }
